@@ -37,38 +37,36 @@ pre{
 }
 </style>
 
-<div>
- 13 x 0 = 0
- 13 x 1 = 13
- 13 x 2 = 26
- 13 x 3 = 39
- 13 x 4 = 52
- 13 x 5 = 65
- 13 x 6 = 78
- 13 x 7 = 91
- 13 x 8 = 104
- 13 x 9 = 117
+#!/usr/bin/python3
+print("Content-type: text/html \n")
+import magicwand
 
- 32 x 0 = 0
- 32 x 1 = 32
- 32 x 2 = 64
- 32 x 3 = 96
- 32 x 4 = 128
- 32 x 5 = 160
- 32 x 6 = 192
- 32 x 7 = 224
- 32 x 8 = 256
- 32 x 9 = 288
+def arithmetic_table(num):
+    count = 0
+    while count < 10:
+        print(F" {num} x {count} = {num*count}")
+        count = count + 1
+        
+def arithmetic_table_for(num):
+    for c in range(10):
+        print(F" {num} x {c} = {num*c}")
+        
+arithmetic_table(13)
 
- 23 x 0 = 0
- 23 x 1 = 23
- 23 x 2 = 46
- 23 x 3 = 69
- 23 x 4 = 92
- 23 x 5 = 115
- 23 x 6 = 138
- 23 x 7 = 161
- 23 x 8 = 184
- 23 x 9 = 207
+print("")
 
-Total is:  4950
+arithmetic_table(32)
+
+print("")
+
+arithmetic_table(23)
+
+print("")
+
+def get_sum(num):
+    total = 0
+    for c in range(num):
+        total = total + c 
+    print("Total is: ", total)
+    
+get_sum(100)
